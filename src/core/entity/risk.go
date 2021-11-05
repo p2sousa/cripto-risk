@@ -1,8 +1,6 @@
 package entity
 
-import "time"
-
 type Risk struct {
-	Point int64
-	Date  time.Time
+	Point float64
+	Date  string
 }

@@ -1,6 +1,7 @@
 package usecase
 
 import (
+	"fmt"
 	"log"
 	"time"
 
@@ -35,6 +36,7 @@ func (ids *ImportDaySummary) Execute(coin string, startDate time.Time) error {
 			continue
 		}
 
+		fmt.Printf("Fetch Day Summary: %s \n", date.Format("2006-01-02"))
 		summary, err := ids.client.FetchDaySymmary(coin, date)
 		if err != nil {
 			log.Fatalln(err)

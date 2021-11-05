@@ -7,3 +7,9 @@ type ICoinSummary interface {
 	Exists(date string) bool
 	Save(entity entity.Coin) error
 }
+
+type IRisk interface {
+	FetchAll() (map[string]entity.Risk, error)
+	Exists(date string) bool
+	Save(entity entity.Risk) error
+}
